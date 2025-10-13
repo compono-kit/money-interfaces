@@ -1,0 +1,23 @@
+{
+	"name": "compono-kit/money",
+	"description": "Interfaces for money classes and currencies",
+	"homepage": "https://github.com/compono-kit/money-interfaces",
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"license": "proprietary",
+	"authors": [
+		{
+			"name": "Benjamin Bruska",
+			"email": "benjamin.bruska@your-coder.de"
+		}
+	],
+	"require": {
+		"php": ">=8.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"ComponoKit\\Money\\Interfaces\\": "src/"
+		}
+	}
+}
+
