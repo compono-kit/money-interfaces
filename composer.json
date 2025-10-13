@@ -1,5 +1,5 @@
 {
-	"name": "compono-kit/money",
+	"name": "compono-kit/money-interfaces",
 	"description": "Interfaces for money classes and currencies",
 	"homepage": "https://github.com/compono-kit/money-interfaces",
 	"minimum-stability": "dev",
