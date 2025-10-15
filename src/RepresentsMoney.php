@@ -18,8 +18,6 @@ interface RepresentsMoney extends \JsonSerializable
 
 	public function mod( RepresentsMoney $money ): RepresentsMoney;
 
-	public function absolute(): RepresentsMoney;
-
 	public function negate(): RepresentsMoney;
 
 	public function ratioOf( RepresentsMoney $money ): float;
