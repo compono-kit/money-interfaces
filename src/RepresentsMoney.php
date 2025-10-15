@@ -2,7 +2,7 @@
 
 namespace ComponoKit\Money\Interfaces;
 
-interface RepresentsMoney extends \JsonSerializable, \Stringable
+interface RepresentsMoney extends \JsonSerializable
 {
 	public function getAmount(): int;
 
