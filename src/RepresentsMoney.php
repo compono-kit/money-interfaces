@@ -14,7 +14,7 @@ interface RepresentsMoney extends \JsonSerializable
 
 	public function multiply( float $factor, int $roundingMode = PHP_ROUND_HALF_UP ): RepresentsMoney;
 
-	public function divide( float $factor, int $roundingMode = PHP_ROUND_HALF_UP ): RepresentsMoney;
+	public function divide( float $divisor, int $roundingMode = PHP_ROUND_HALF_UP ): RepresentsMoney;
 
 	public function mod( RepresentsMoney $money ): RepresentsMoney;
 
