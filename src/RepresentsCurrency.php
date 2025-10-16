@@ -10,5 +10,7 @@ interface RepresentsCurrency
 
 	public function getMinorUnitFactor(): int;
 
+	public function getMinorUnit(): int;
+
 	public function equals( RepresentsCurrency $other ): bool;
 }
