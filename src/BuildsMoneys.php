@@ -4,5 +4,5 @@ namespace ComponoKit\Money\Interfaces;
 
 interface BuildsMoneys
 {
-	public function build( int $amount, RepresentsCurrency $currency ): RepresentsMoney;
+	public function build( int $amount ): RepresentsMoney;
 }
