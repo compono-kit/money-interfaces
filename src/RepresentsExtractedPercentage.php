@@ -2,7 +2,7 @@
 
 namespace ComponoKit\Money\Interfaces;
 
-interface RepresentExtractedPercentage
+interface RepresentsExtractedPercentage
 {
 	public function getPercentage(): RepresentsMoney;
 
