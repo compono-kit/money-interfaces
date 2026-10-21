@@ -8,19 +8,19 @@ interface RepresentsMoney extends \JsonSerializable
 
 	public function getCurrency(): RepresentsCurrency;
 
-	public function add( RepresentsMoney $other ): RepresentsMoney;
+	public function add( RepresentsMoney $other ): static;
 
-	public function subtract( RepresentsMoney $other ): RepresentsMoney;
+	public function subtract( RepresentsMoney $other ): static;
 
-	public function multiply( float $factor, int $roundingMode = PHP_ROUND_HALF_UP ): RepresentsMoney;
+	public function multiply( float $factor, \RoundingMode $roundingMode = \RoundingMode::HalfAwayFromZero ): static;
 
-	public function divide( float $divisor, int $roundingMode = PHP_ROUND_HALF_UP ): RepresentsMoney;
+	public function divide( float $divisor, \RoundingMode $roundingMode = \RoundingMode::HalfAwayFromZero ): static;
 
-	public function mod( RepresentsMoney $money ): RepresentsMoney;
+	public function mod( RepresentsMoney $money ): static;
 
-	public function absolute(): RepresentsMoney;
+	public function absolute(): static;
 
-	public function negate(): RepresentsMoney;
+	public function negate(): static;
 
 	public function ratioOf( RepresentsMoney $money ): float;
 
@@ -31,18 +31,18 @@ interface RepresentsMoney extends \JsonSerializable
 	public function isNegative(): bool;
 
 	/**
-	 * @return \Iterator<int,RepresentsMoney>
+	 * @return \Iterator<int,static>
 	 */
 	public function allocateToTargets( int $numberOfTargets ): \Iterator;
 
 	/**
-	 * @param array|int[] $ratios
+	 * @param int[] $ratios
 	 *
-	 * @return \Iterator<int,RepresentsMoney>
+	 * @return \Iterator<int,static>
 	 */
 	public function allocateByRatios( array $ratios ): \Iterator;
 
-	public function extractPercentage( float $percentage, int $roundingMode = PHP_ROUND_HALF_UP ): RepresentExtractedPercentage;
+	public function extractPercentage( float $percentage, \RoundingMode $roundingMode = \RoundingMode::HalfAwayFromZero ): RepresentsExtractedPercentage;
 
 	public function equals( RepresentsMoney $other ): bool;
 
